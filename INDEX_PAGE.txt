@@ -55,6 +55,17 @@ curl -d '{"inventory_item":{"id":808950810,"sku":"new sku"}}' \
 -X PUT "https://shiv-local-demo.myshopify.com/admin/api/2023-04/inventory_items/808950810.json" \
 -H "X-Shopify-Access-Token: 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" \
 -H "Content-Type: application/json"
+=========================================================================================================================================
+
+=======================================================================================================
+
+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
+=================================SHOPIFY API REFERENCE FOR GET RECORD =================================
+
+curl -X GET \
+  https://value-plus-india.myshopify.com/admin/api/2023-04/products/7500658540693.json?fields=id,title \
+  -H 'Content-Type: application/json' \
+  -H 'X-Shopify-Access-Token: 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'
 
 
 
