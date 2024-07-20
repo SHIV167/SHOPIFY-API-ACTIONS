@@ -142,7 +142,32 @@ variables = {
 
 
 
+mutation {
+  productDelete(input: {id: "gid://shopify/Product/108828309"}) {
+    deletedProductId
+  }
+}
 
+
+
+mutation collectionDelete($input: CollectionDeleteInput!) {
+  collectionDelete(input: $input) {
+    deletedCollectionId
+    shop {
+      id
+      name
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+{
+  "input": {
+    "id": "gid://shopify/Collection/1009501285"
+  }
+}
 
 
 
