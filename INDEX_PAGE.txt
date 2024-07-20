@@ -94,6 +94,56 @@ curl -X POST \
   }
   '
 
+{
+  product(id: "gid://shopify/Product/8119795253543"){    
+    variants(first:5 ){ 
+      nodes {
+        id
+        price
+      }
+    }    
+  }      
+}
+  
+  
+  
+  mutation {
+  productUpdate(input: {id: "gid://shopify/Product/8148348436784",
+    variants:{
+      price:300.00
+    }
+  }) {
+    product {
+      id
+    }
+  }
+} 
+
+
+
+
+
+    mutation productVariantUpdate($input1: ProductVariantInput!) {
+              item1: productVariantUpdate(input: $input1) {
+                productVariant {
+                  id,
+                  price
+                }
+                userErrors {
+                  field
+                  message
+                }
+            }
+    '''
+
+variables = {
+                "input2":{"id":"gid://shopify/ProductVariant/42177699971252","price":15.20}
+            }
+
+
+
+
+
 
 
 
